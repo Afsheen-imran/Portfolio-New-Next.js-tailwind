@@ -1,3 +1,4 @@
+// components/Project.tsx
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -14,32 +15,33 @@ const Project = () => {
   return (
     <div
       id="project"
-      className="bg-cover bg-center max-h-fit"
+      className="bg-cover bg-center pt-24 pb-24 md:pt-28 md:pb-32"
       style={{
         backgroundImage:
           "url('https://i0.wp.com/picjumbo.com/wp-content/uploads/dark-black-orange-3d-abstract-wallpaper-free-photo.jpg?w=1500&quality=50')",
       }}
     >
-      <div className="container px-5 py-24 mx-auto">
+      <div className="container px-5 py-12 md:py-24 mx-auto">
         <div className="flex flex-col w-full mb-20 text-center">
-          <h1 className="mb-4 text-2xl font-extrabold sm:text-3xl title-font text-white">
+          <h1 className="mb-4 text-3xl font-extrabold sm:text-4xl title-font text-white">
             My Projects
           </h1>
         </div>
         <div className="flex flex-wrap -m-5">
           {/* Project 1 */}
-          <div className="p-4 cursor-pointer lg:w-1/3 sm:w-1/2">
+          <div className="p-4 cursor-pointer lg:w-1/3 sm:w-1/2 w-full">
             <div className="relative flex">
               <Image
                 alt="CLI Calculator"
                 className="absolute inset-0 object-cover object-center w-full h-full"
-                src={proj1} 
+                src={proj1}
+                fill
               />
-              <div className="relative z-10 w-full px-8 py-10 bg-white border-4 border-blue-500 opacity-0 hover:opacity-100">
+              <div className="relative z-10 w-full px-8 py-10 bg-white border-4 border-blue-500 opacity-0 hover:opacity-100 transition-opacity duration-300">
                 <h2 className="mb-1 text-sm font-bold tracking-widest text-blue-500 title-font">
                   CLI Calculator
                 </h2>
-                <p className="leading-relaxed align-middle line-clamp-2">
+                <p className="leading-relaxed line-clamp-2">
                   Transform Your Command Line Interface with Our CLI Calculator.
                   Introducing our CLI Calculator: a sleek and efficient tool
                   crafted with TypeScript and Node.js, featuring an intuitive
@@ -49,7 +51,7 @@ const Project = () => {
                 </p>
                 <Link
                   target="_blank"
-                  href={"https://github.com/Afsheen-imran/Simple-Calculator.git"}
+                  href="https://github.com/Afsheen-imran/Simple-Calculator.git"
                 >
                   <p className="leading-relaxed text-blue-500 hover:underline">
                     View Project..
@@ -60,17 +62,18 @@ const Project = () => {
           </div>
 
           {/* Project 2 */}
-          <div className="p-4 cursor-pointer lg:w-1/3 sm:w-1/2">
+          <div className="p-4 cursor-pointer lg:w-1/3 sm:w-1/2 w-full">
             <div className="relative flex">
               <Image
                 alt="CLI Number Guessing Game"
                 className="absolute inset-0 object-cover object-center w-full h-full"
-                src={proj2} // Use the imported image
+                src={proj2}
+                fill
               />
-              <div className="relative z-10 w-full px-8 py-10 bg-white border-4 border-gray-200 opacity-0 hover:opacity-100">
-                <h1 className="mb-3 text-lg font-medium text-gray-900 title-font">
+              <div className="relative z-10 w-full px-8 py-10 bg-white border-4 border-gray-200 opacity-0 hover:opacity-100 transition-opacity duration-300">
+                <h2 className="mb-3 text-lg font-medium text-gray-900 title-font">
                   CLI Number Guessing Game
-                </h1>
+                </h2>
                 <p className="leading-relaxed line-clamp-2">
                   Number Guessing Fun: Play in Your Terminal! Welcome to our CLI
                   Number Guessing Game! Test your skills as you try to guess the
@@ -79,7 +82,7 @@ const Project = () => {
                 </p>
                 <Link
                   target="_blank"
-                  href={"https://github.com/Afsheen-imran/Number-Guessing-Game.git"}
+                  href="https://github.com/Afsheen-imran/Number-Guessing-Game.git"
                 >
                   <p className="leading-relaxed text-blue-500 hover:underline">
                     View Project..
@@ -90,14 +93,15 @@ const Project = () => {
           </div>
 
           {/* Project 3 */}
-          <div className="p-4 cursor-pointer lg:w-1/3 sm:w-1/2">
+          <div className="p-4 cursor-pointer lg:w-1/3 sm:w-1/2 w-full">
             <div className="relative flex">
               <Image
                 alt="CLI ATM Machine"
                 className="absolute inset-0 object-cover object-center w-full h-full"
-                src={proj3} // Use the imported image
+                src={proj3}
+                fill
               />
-              <div className="relative z-10 w-full px-8 py-10 bg-white border-4 border-gray-200 opacity-0 hover:opacity-100">
+              <div className="relative z-10 w-full px-8 py-10 bg-white border-4 border-gray-200 opacity-0 hover:opacity-100 transition-opacity duration-300">
                 <h2 className="mb-1 text-sm font-medium tracking-widest text-blue-500 title-font">
                   CLI ATM Machine
                 </h2>
@@ -111,7 +115,7 @@ const Project = () => {
                 </p>
                 <Link
                   target="_blank"
-                  href={"https://github.com/Afsheen-imran/ATM-Machine.git"}
+                  href="https://github.com/Afsheen-imran/ATM-Machine.git"
                 >
                   <p className="leading-relaxed text-blue-500 hover:underline">
                     View Project..
@@ -122,14 +126,15 @@ const Project = () => {
           </div>
 
           {/* Project 4 */}
-          <div className="p-4 cursor-pointer lg:w-1/3 sm:w-1/2">
+          <div className="p-4 cursor-pointer lg:w-1/3 sm:w-1/2 w-full">
             <div className="relative flex">
               <Image
                 alt="CLI To Do List"
                 className="absolute inset-0 object-cover object-center w-full h-full"
-                src={proj4} // Use the imported image
+                src={proj4}
+                fill
               />
-              <div className="relative z-10 w-full px-8 py-10 bg-white border-4 border-gray-200 opacity-0 hover:opacity-100">
+              <div className="relative z-10 w-full px-8 py-10 bg-white border-4 border-gray-200 opacity-0 hover:opacity-100 transition-opacity duration-300">
                 <h2 className="mb-1 text-sm font-medium tracking-widest text-blue-500 title-font">
                   CLI To Do List
                 </h2>
@@ -143,7 +148,7 @@ const Project = () => {
                 </p>
                 <Link
                   target="_blank"
-                  href={"https://github.com/Afsheen-imran/To-do-list-app.git"}
+                  href="https://github.com/Afsheen-imran/To-do-list-app.git"
                 >
                   <p className="leading-relaxed text-blue-500 hover:underline">
                     View Project..
@@ -154,14 +159,15 @@ const Project = () => {
           </div>
 
           {/* Project 5 */}
-          <div className="p-4 cursor-pointer lg:w-1/3 sm:w-1/2">
+          <div className="p-4 cursor-pointer lg:w-1/3 sm:w-1/2 w-full">
             <div className="relative flex">
               <Image
                 alt="Dynamic Resume Builder"
                 className="absolute inset-0 object-cover object-center w-full h-full"
-                src={proj5} // Use the imported image
+                src={proj5}
+                fill
               />
-              <div className="relative z-10 w-full px-8 py-10 bg-white border-4 border-gray-200 opacity-0 hover:opacity-100">
+              <div className="relative z-10 w-full px-8 py-10 bg-white border-4 border-gray-200 opacity-0 hover:opacity-100 transition-opacity duration-300">
                 <h2 className="mb-1 text-sm font-medium tracking-widest text-blue-500 title-font">
                   Dynamic Resume Builder
                 </h2>
@@ -174,7 +180,7 @@ const Project = () => {
                 </p>
                 <Link
                   target="_blank"
-                  href={"https://m-ilestone-3-dynamic-resume-builder.vercel.app/"}
+                  href="https://m-ilestone-3-dynamic-resume-builder.vercel.app/"
                 >
                   <p className="leading-relaxed text-blue-500 hover:underline">
                     View Project..
@@ -185,14 +191,15 @@ const Project = () => {
           </div>
 
           {/* Project 6 */}
-          <div className="p-4 cursor-pointer lg:w-1/3 sm:w-1/2">
+          <div className="p-4 cursor-pointer lg:w-1/3 sm:w-1/2 w-full">
             <div className="relative flex">
               <Image
                 alt="Pizza Delight Website"
                 className="absolute inset-0 object-cover object-center w-full h-full"
-                src={proj6} // Use the imported image
+                src={proj6}
+                fill
               />
-              <div className="relative z-10 w-full px-8 py-10 bg-white border-4 border-gray-200 opacity-0 hover:opacity-100">
+              <div className="relative z-10 w-full px-8 py-10 bg-white border-4 border-gray-200 opacity-0 hover:opacity-100 transition-opacity duration-300">
                 <h2 className="mb-1 text-sm font-medium tracking-widest text-blue-500 title-font">
                   Pizza Delight Website
                 </h2>
@@ -204,7 +211,7 @@ const Project = () => {
                 </p>
                 <Link
                   target="_blank"
-                  href={"https://pizza-parlour-website.vercel.app/"}
+                  href="https://pizza-parlour-website.vercel.app/"
                 >
                   <p className="leading-relaxed text-blue-500 hover:underline">
                     View Project..

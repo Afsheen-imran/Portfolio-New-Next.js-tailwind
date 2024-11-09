@@ -4,11 +4,12 @@ const Contact = () => {
   return (
     <div
       id="Contact"
-      className="bg-cover bg-center min-h-max"
-      style={{
-        backgroundImage:
-          "url('https://i0.wp.com/picjumbo.com/wp-content/uploads/dark-black-orange-3d-abstract-wallpaper-free-photo.jpg?w=1500&quality=50')",
-      }}
+      className="bg-black bg-center h-auto bg-cover
+      "
+      // style={{
+      //   backgroundImage:
+      //     "url('https://i0.wp.com/picjumbo.com/wp-content/uploads/dark-black-orange-3d-abstract-wallpaper-free-photo.jpg?w=1500&quality=50')",
+      // }}
     >
       <section className="text-black body-font relative">
         <div className="container px-5 py-24 mx-auto flex sm:flex-nowrap flex-wrap">
@@ -24,7 +25,7 @@ const Contact = () => {
               marginWidth={0}
               scrolling="no"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7235.876805265361!2d67.09423058903616!3d24.934168240392548!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb338b3fa11fc15%3A0xcd134851f8e54958!2sBlock%204%20Gulshan-e-Iqbal%2C%20Karachi%2C%20Karachi%20City%2C%20Sindh%2C%20Pakistan!5e0!3m2!1sen!2s!4v1727275757068!5m2!1sen!2s"
-              style={{ filter: "contrast(1.2) opacity(0.6)" }} // Reduced opacity and contrast for better readability
+              style={{ filter: "contrast(1.2) opacity(0.6)" }} 
             />
             <div className="bg-gray-300 relative flex flex-wrap py-6 rounded shadow-md">
               <div className="lg:w-1/2 px-6">

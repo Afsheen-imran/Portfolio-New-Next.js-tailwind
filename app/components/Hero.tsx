@@ -56,27 +56,29 @@ const Hero: React.FC = () => {
               Pinterest.
             </motion.p>
             <div className="flex justify-center">
-              <Link href="/contact">
+              <Link href="#about">
                 <motion.button
                   className="inline-flex text-white bg-blue-500 border-0 py-2 px-6 focus:outline-none hover:bg-red-500 rounded text-lg"
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  Contact
+                  Learn More
                 </motion.button>
               </Link>
             </div>
           </div>
-          <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
+
+          {/* Hero Section Image */}
+          <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mt-8 md:mt-0">
             <motion.div
               initial={{ opacity: 0, scale: 0.8, rotate: -10 }}
               animate={{ opacity: 1, scale: 1, rotate: 0 }}
               transition={{ duration: 1.5, delay: 1 }}
               whileHover={{ scale: 1.05, rotate: 5 }}
-              className="object-cover object-center rounded mx-auto w-[15rem]"
+              className="object-cover object-center rounded mx-auto w-full h-[300px] md:h-[400px] lg:h-[500px]"
             >
               <Image
-                className="object-cover object-center rounded mx-auto w-[15rem]"
+                className="object-cover object-center rounded mx-auto w-full h-full"
                 alt="My Image"
                 width={1500}
                 height={1500}

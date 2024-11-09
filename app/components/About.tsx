@@ -1,77 +1,58 @@
-
+// components/About.tsx
 "use client";
 
 import Image from "next/image";
-import React from "react";
 import { motion } from "framer-motion";
 import myImage from "../public/images/my-image.jpeg";
 
 const About = () => {
   return (
-    <div 
-      id="about" 
-      className="bg-cover bg-center h-screen"
-      style={{ 
-        backgroundImage: "url('https://i0.wp.com/picjumbo.com/wp-content/uploads/dark-black-orange-3d-abstract-wallpaper-free-photo.jpg?w=1500&quality=50') " 
+    <div
+      id="about"
+      className="bg-cover bg-center min-h-screen h-full"
+      style={{
+        backgroundImage: "url('https://i0.wp.com/picjumbo.com/wp-content/uploads/dark-black-orange-3d-abstract-wallpaper-free-photo.jpg?w=1500&quality=50')",
       }}
     >
-      <section className="text-white body-font h-full">
-        <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center h-full">
-          
-          {/* Animated Image */}
+      <section className="text-white body-font h-full py-16 md:py-24 px-4 md:px-8">
+        <div className="container mx-auto flex flex-col md:flex-row items-center md:space-x-8 space-y-6 md:space-y-0">
           <motion.div
-            className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0"
+            className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mx-auto"
             initial={{ opacity: 0, scale: 0.8, rotate: -10 }}
             animate={{ opacity: 1, scale: 1, rotate: 0 }}
             transition={{ duration: 1.5, delay: 0.5 }}
             whileHover={{ scale: 1.05, rotate: 3 }}
           >
             <Image
-              className="object-cover object-center rounded mx-auto w-[300px] h-[400px]"
-              alt="hero"
+              className="object-cover object-center rounded w-[250px] h-[350px] mx-auto md:w-[300px] md:h-[400px]"
+              alt="Profile Image"
               src={myImage}
-              width={300}
-              height={400}
             />
           </motion.div>
-
-          {/* Animated Text */}
           <motion.div
-            className="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center"
+            className="lg:flex-grow md:w-1/2 flex flex-col text-center md:text-left"
             initial={{ x: -100, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 1.5 }}
           >
             <motion.h1
-              className="title-font sm:text-4xl mt-4 text-3xl mb-2 font-medium text-white"
+              className="text-3xl sm:text-4xl font-medium mb-4"
               initial={{ y: -50, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 1, delay: 1 }}
             >
               About Me
             </motion.h1>
-            
             <motion.p
-              className="mb-2 leading-relaxed text-white font-semibold text-justify"
+              className="mb-4 text-white font-semibold text-justify"
               initial={{ x: -100, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ duration: 1.5, delay: 1.2 }}
             >
-              I am a frontend web developer, social media marketer, Shopify store specialist, content writer, and graphic designer with over 2 years of experience. I specialize in creating responsive websites using HTML, CSS, JavaScript, TypeScript, React, and Next.js, and I help businesses grow through effective social media campaigns and optimized Shopify stores. My skills in content writing and design allow me to deliver creative, engaging solutions that connect with audiences and elevate brands. Let us work together to bring your vision to life!
+              I am a frontend web developer, social media marketer, Shopify store specialist, content writer, and graphic designer with over 2 years of experience. I specialize in crafting visually appealing websites, building responsive layouts, and ensuring seamless user experiences across all devices. With expertise in various frontend frameworks and design tools, I deliver high-quality, dynamic, and interactive web pages. I’m also well-versed in e-commerce platforms like Shopify, where I help clients create and manage their online stores effectively.
             </motion.p>
-            
-            <motion.p
-              className="mb-5 leading-relaxed text-white font-semibold text-justify"
-              initial={{ x: -100, opacity: 0 }}
-              animate={{ x: 0, opacity: 1 }}
-              transition={{ duration: 1.5, delay: 1.4 }}
-            >
-              With a comprehensive skill set and a commitment to delivering high-quality work, I am here to help businesses and individuals transform their ideas into reality. Let’s connect and bring your vision to life!
-            </motion.p>
-
-            {/* Animated Button */}
             <motion.div
-              className="flex justify-center"
+              className="flex justify-center md:justify-start"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 1.5, delay: 1.6 }}
@@ -82,7 +63,7 @@ const About = () => {
                 rel="noopener noreferrer"
               >
                 <motion.button
-                  className="inline-flex text-white bg-blue-500 border-0 py-2 px-5 focus:outline flex-none hover:bg-red-500 rounded text-sm"
+                  className="text-white bg-blue-500 border-0 py-2 px-5 focus:outline hover:bg-red-500 rounded text-sm"
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.95 }}
                 >
@@ -90,7 +71,6 @@ const About = () => {
                 </motion.button>
               </a>
             </motion.div>
-
           </motion.div>
         </div>
       </section>
